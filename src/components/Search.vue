@@ -12,7 +12,13 @@
     export default {
         methods: {
             tryToSearch(query) {
-               if (this.currentTab === 0) this.$store.dispatch('searchMovies', {title: query, page: 1})
+               if (this.currentTab === 0) {
+                   this.$store.dispatch('searchMovies', {title: query, page: 1}).then(response => {
+                       if (!response) {
+                            this.$store.commit('setSnackbar', true)
+                       }
+                   })
+               }
             }
         },
         computed: {

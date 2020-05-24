@@ -25,6 +25,7 @@ export const getters = {
         const left = right - 10
         return favorites.length > 9 ? favorites.slice(left, right) : favorites
     },
+    snackbar: ({snackbar}) => snackbar,
     searchQuery: ({searchQuery}) => searchQuery,
     favoritesCurrentPage: ({favoritesCurrentPage}) => favoritesCurrentPage,
     pagination: ({pagination}) => pagination,

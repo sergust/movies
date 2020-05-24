@@ -17,6 +17,9 @@ export const mutations = {
     setSearchQuery(state, query) {
         state.searchQuery = query
     },
+    setSnackbar(state, value) {
+        state.snackbar = value
+    },
     favoritesCurrentPage(state, page) {
         state.favoritesCurrentPage = page
     },
