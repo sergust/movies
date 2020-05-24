@@ -1,28 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <v-app id="sandbox">
+        <v-content>
+          <v-container fluid>
+            <v-row
+                    align="center"
+                    justify="center"
+            >
+              <v-col cols="12">
+                <v-card>
+                  <v-card-text>
+                    <Controls />
+                    <Grid />
+                    <Pagination />
+                  </v-card-text>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-content>
+        <v-row>
+          <v-col>
+            <p class="text-center grey--text">Made for Jibble by Sergey Ustinov with ❤️</p>
+          </v-col>
+        </v-row>
+      </v-app>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Controls from './components/Controls'
+import Grid from './components/Grid'
+import Pagination from './components/Pagination'
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Controls,
+    Grid,
+    Pagination
+  },
+};
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
